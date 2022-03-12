@@ -1,2 +1,2 @@
 # gardenparty
-A place to plan and track gardening activity
+A Django app to plan and track gardening activity.
