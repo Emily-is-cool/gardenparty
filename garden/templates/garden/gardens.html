@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Gardens</h2>
+<ol>
+    {% for g in garden_list %}
+        <li>{{ g.gardenname }} </li>
+        <li>{{ g.gardendescription }}</li>
+    </ol>
+        {% endfor %}
+
+{% endblock %}
