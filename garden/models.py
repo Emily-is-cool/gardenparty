@@ -44,3 +44,4 @@ class Plant(models.Model):
     class Meta:
         db_table='plant'
         verbose_name_plural='plants'
+        

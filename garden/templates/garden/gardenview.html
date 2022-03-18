@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Garden Details:</h2>
+<p>Garden Name: {{ garden.gardenname }}</p>
+<p>Date started: {{ garden.datestarted }}</p>
+<p>Garden Type: {{gardentype.typedescription}} </p>
+<p>Plants: {{Plant.plantname}}</p>
+
+<li><a href="{% url 'newplant' %}">Add New Plant</a></li>
+{% endblock %}

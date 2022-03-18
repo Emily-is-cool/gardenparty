@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2>Gardens</h2>
-<ol>
+<ul class="list-group">
     {% for g in garden_list %}
-        <li>{{ g.gardenname }} </li>
-        <li>{{ g.gardendescription }}</li>
-    </ol>
+        <li class="list-group-item"><a href="{% url 'gardenview' id=g.id %}">{{ g.gardenname }} : {{ g.gardendescription }}</a></li>
+        </ul>
         {% endfor %}
 
 {% endblock %}
+
+
