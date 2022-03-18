@@ -14,3 +14,6 @@ def index(request):
 def gardens(request):
     garden_list=Garden.objects.all()
     return render(request, 'garden/gardens.html', {'garden_list': garden_list})
+
+def gardenview(request, id):
+    return render(request, 'garden/gardenview.html', {'gardenview': gardenview})

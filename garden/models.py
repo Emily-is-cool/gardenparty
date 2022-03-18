@@ -20,6 +20,7 @@ class Garden(models.Model):
     gardentype=models.ForeignKey(GardenType, on_delete=models.DO_NOTHING)
     user=models.ForeignKey(User, on_delete=models.DO_NOTHING)
     gardendescription=models.TextField('Garden Description:', null=True, blank=True)
+    datestarted=models.DateField
 
     def __str__(self):
         return self.gardenname
@@ -31,11 +32,11 @@ class Garden(models.Model):
 class Plant(models.Model):
     plantname=models.CharField('Plant Name:', max_length=300)
     plantdescr=models.TextField('Plant Description:')
-    user=models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
     isseed=models.BooleanField('Starting from seed?', default=False)
     dateplanted=models.DateField('Date Planted:')
-    dateharvested=models.DateField('Date Harvested:')
-    gardenid=models.ForeignKey(Garden, on_delete=models.DO_NOTHING)
+    dateharvested=models.DateField(null=True, blank=True)
+    gardenid=models.ForeignKey(Garden, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.plantname
