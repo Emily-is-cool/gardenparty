@@ -33,4 +33,4 @@ class PlantTest(TestCase):
         self.assertEqual(str(Plant._meta.db_table), 'plant')
         
         ##Saving this for later...
-        ##self.Plant=Plant(plantname='strawberry', plantdescr='everbearing', user=self.user, isseed=True, dateplanted=2022-3-16, dateharvested='null', gardenid=self.gardenid)
+        ##self.Plant=Plant(plantname='strawberry', plantdescr='everbearing', user=self.user, isseed=False, dateplanted=2022-3-16, dateharvested='null', gardenid=self.gardenid)
