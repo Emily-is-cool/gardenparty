@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Plant Details:</h2>
+<ul>
+<li>Plant Name: {{ plantdetail.plantname}} </li>
+<li>Plant Description: {{plantdetail.plantdescr}} </li>
+<li>Date started: {{ plantdetail.dateplanted }}</li>
+
+</ul>
+
+<!--Future ideas: show how many gardens a plant is in. heat map of where it is grown-->
+{% endblock %}

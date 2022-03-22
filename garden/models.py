@@ -18,9 +18,11 @@ class GardenType(models.Model):
 class Garden(models.Model):
     gardenname=models.CharField('Name your Garden:', max_length=250)
     gardentype=models.ForeignKey(GardenType, on_delete=models.DO_NOTHING)
-    user=models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    user=models.ForeignKey(User, on_delete=models.DO_NOTHING) # I want this to be user specific! user=auth_user?
     gardendescription=models.TextField('Garden Description:', null=True, blank=True)
     datestarted=models.DateField
+    #id=models.ManyToManyField(Plant, on_delete=models.DO_NOTHING)- HATES Plant as a variable
+    #plantid how to add the list of plants in the garden? 
 
     def __str__(self):
         return self.gardenname

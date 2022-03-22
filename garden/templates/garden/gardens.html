@@ -4,9 +4,10 @@
 <ul class="list-group">
     {% for g in garden_list %}
         <li class="list-group-item"><a href="{% url 'gardenview' id=g.id %}">{{ g.gardenname }} : {{ g.gardendescription }}</a></li>
-        </ul>
+        
         {% endfor %}
-
+    </ul>
 {% endblock %}
 
+<!--Future ideas: thumbnail photos, map feature, top ten, separate out gardens and a specific user's garden-->
 

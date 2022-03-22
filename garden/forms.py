@@ -9,4 +9,7 @@ class GardenForm(forms.ModelForm):
 class PlantForm(forms.ModelForm):
     class Meta:
         model=Plant
-        fields='__all__'
+        fields={'plantname', 'plantdescr', 'isseed', 'dateplanted'}
+
+#dateplanted = forms.DateField(widget = NumberInput(attrs={'type':'date'}))
+#dateharvested = forms.DateField(widget = NumberInput(attrs={'type':'date'}))    

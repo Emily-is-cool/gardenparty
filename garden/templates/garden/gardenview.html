@@ -2,10 +2,23 @@
 {% block content %}
 
 <h2>Garden Details:</h2>
-<p>Garden Name: {{ garden.gardenname }}</p>
-<p>Date started: {{ garden.datestarted }}</p>
-<p>Garden Type: {{gardentype.typedescription}} </p>
-<p>Plants: {{Plant.plantname}}</p>
+<ul>
+<li>Garden Name: {{plantings.gardenname}} </li>
+
+<li>Garden Type: {{plantings.gardentype}} </li>
+</ul>
+<h2>Plants:</h2>
+<ul class="list-group">
+    {% for p in plant_list %}
+        <li class="list-group-item"><a href="{% url 'plantview' id=p.id %}">{{ p.plantname }} : {{ p.plantdescription }}</a></li>
+     
+        {% endfor %}
+    </ul>
+    
 
 <li><a href="{% url 'newplant' %}">Add New Plant</a></li>
+</ul>
 {% endblock %}
+
+<!--Future ideas: tick boxes for progress on plants(planted, bloomed, first fruiting, harvest, died(cause of death?))-->
+<!--photos - save photo of seed packet or plant tag, photo of plant(multiples) with caption field.-->
